@@ -30,6 +30,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+[id]{scroll-margin-top:calc(var(--nav-h) + 14px)}
 body{font-family:var(--font-sans);font-size:var(--fs-base);line-height:var(--lh);color:var(--ink);
   background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:clip}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:var(--lh-tight);letter-spacing:-.01em;color:var(--ink)}
@@ -138,13 +139,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s-8)}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-5)}
 @media(max-width:900px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s-8);
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s-8);display:flex;flex-direction:column;align-items:flex-start;
   transition:transform var(--t) var(--ease),box-shadow var(--t),border-color var(--t)}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--line-2)}
 .card .ic{width:52px;height:52px;border-radius:var(--r-md);display:grid;place-items:center;background:var(--brand-soft);color:var(--brand);margin-bottom:var(--s-5)}
 .card .ic svg{width:26px;height:26px}
 .card h3{font-size:var(--fs-md);margin-bottom:var(--s-3)}
-.card p{color:var(--muted);font-size:var(--fs-sm)}
+.card p{color:var(--muted);font-size:var(--fs-sm);flex-grow:1}
+.grid-2,.grid-3,.grid-4{align-items:stretch}
 .card .price{margin-top:var(--s-4);font-family:var(--font-display);color:var(--brand);font-size:var(--fs-md)}
 .card-link{display:inline-flex;align-items:center;gap:6px;margin-top:var(--s-5);color:var(--brand);font-weight:600;font-size:var(--fs-sm)}
 .card-link svg{width:16px;height:16px;transition:transform var(--t-fast)}
@@ -385,6 +387,12 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
 .cta h2{color:#f7f3ea} .cta p{color:rgba(233,228,214,.78)}
 .cta .btn-ghost{color:#f7f3ea;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3)}
 .footer{background:#12101a;border-top:none}
+.footer .fabout{color:rgba(236,231,218,.65)}
+.footer h4{color:#f0e9d8}
+.footer a{display:flex;align-items:center;gap:9px;color:rgba(236,231,218,.68)}
+.footer a:hover{color:#d9b96a}
+.footer a svg{width:16px;height:16px;flex:none;opacity:.8}
+.footer .bar{color:rgba(236,231,218,.45);border-top-color:rgba(255,255,255,.1)}
 .phero::before{background:linear-gradient(180deg,rgba(248,245,238,.88),rgba(248,245,238,.96) 60%,var(--bg)),radial-gradient(70% 90% at 85% 0%,rgba(179,137,58,.12),transparent 60%)}
 .phero.hasimg::before{background:linear-gradient(90deg,rgba(248,245,238,.98) 30%,rgba(248,245,238,.82) 52%,rgba(248,245,238,.06) 82%),linear-gradient(180deg,rgba(248,245,238,.15) 50%,var(--bg) 96%)}
 .phero-photo{opacity:.9;z-index:-2}

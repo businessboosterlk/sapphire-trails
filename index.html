@@ -30,6 +30,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+[id]{scroll-margin-top:calc(var(--nav-h) + 14px)}
 body{font-family:var(--font-sans);font-size:var(--fs-base);line-height:var(--lh);color:var(--ink);
   background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:clip}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:var(--lh-tight);letter-spacing:-.01em;color:var(--ink)}
@@ -138,13 +139,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s-8)}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-5)}
 @media(max-width:900px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s-8);
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s-8);display:flex;flex-direction:column;align-items:flex-start;
   transition:transform var(--t) var(--ease),box-shadow var(--t),border-color var(--t)}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--line-2)}
 .card .ic{width:52px;height:52px;border-radius:var(--r-md);display:grid;place-items:center;background:var(--brand-soft);color:var(--brand);margin-bottom:var(--s-5)}
 .card .ic svg{width:26px;height:26px}
 .card h3{font-size:var(--fs-md);margin-bottom:var(--s-3)}
-.card p{color:var(--muted);font-size:var(--fs-sm)}
+.card p{color:var(--muted);font-size:var(--fs-sm);flex-grow:1}
+.grid-2,.grid-3,.grid-4{align-items:stretch}
 .card .price{margin-top:var(--s-4);font-family:var(--font-display);color:var(--brand);font-size:var(--fs-md)}
 .card-link{display:inline-flex;align-items:center;gap:6px;margin-top:var(--s-5);color:var(--brand);font-weight:600;font-size:var(--fs-sm)}
 .card-link svg{width:16px;height:16px;transition:transform var(--t-fast)}
@@ -385,6 +387,12 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
 .cta h2{color:#f7f3ea} .cta p{color:rgba(233,228,214,.78)}
 .cta .btn-ghost{color:#f7f3ea;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3)}
 .footer{background:#12101a;border-top:none}
+.footer .fabout{color:rgba(236,231,218,.65)}
+.footer h4{color:#f0e9d8}
+.footer a{display:flex;align-items:center;gap:9px;color:rgba(236,231,218,.68)}
+.footer a:hover{color:#d9b96a}
+.footer a svg{width:16px;height:16px;flex:none;opacity:.8}
+.footer .bar{color:rgba(236,231,218,.45);border-top-color:rgba(255,255,255,.1)}
 .phero::before{background:linear-gradient(180deg,rgba(248,245,238,.88),rgba(248,245,238,.96) 60%,var(--bg)),radial-gradient(70% 90% at 85% 0%,rgba(179,137,58,.12),transparent 60%)}
 .phero.hasimg::before{background:linear-gradient(90deg,rgba(248,245,238,.98) 30%,rgba(248,245,238,.82) 52%,rgba(248,245,238,.06) 82%),linear-gradient(180deg,rgba(248,245,238,.15) 50%,var(--bg) 96%)}
 .phero-photo{opacity:.9;z-index:-2}
@@ -418,18 +426,7 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
 <div style="margin-top:24px"><div class="cur-toggle" role="group" aria-label="Currency"><button data-cur="USD" onclick="setCur('USD')">USD</button><button data-cur="GBP" onclick="setCur('GBP')">GBP</button><button data-cur="EUR" onclick="setCur('EUR')">EUR</button><button data-cur="LKR" onclick="setCur('LKR')">LKR</button></div></div>
 <a class="btn btn-primary btn-block" style="margin-top:20px" href="contact.html" onclick="closeDrawer()">Enquire now</a>
 <a class="btn btn-ghost btn-block" style="margin-top:12px" href="https://wa.me/94763756688" target="_blank">WhatsApp us</a>
-</aside><section class="hero"><img class="hero-photo" src="assets/hero-mine.jpg" alt="Inside a working gem mine in Ratnapura, Sri Lanka" onerror="this.remove()"><video class="hero-video" autoplay muted loop playsinline poster="assets/hero-mine.jpg" aria-hidden="true"><source src="assets/hero-loop.mp4" type="video/mp4"></video><div class="hero-art hero-ov"></div><svg class="hero-facets" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<g stroke="rgba(198,163,78,.22)" stroke-width="1">
-<path d="M980 120 L1120 210 L1080 380 L900 360 L860 200 Z"/>
-<path d="M1120 210 L1260 180 L1300 330 L1080 380 Z"/>
-<path d="M900 360 L1080 380 L1000 560 L820 500 Z"/>
-<path d="M1080 380 L1300 330 L1240 540 L1000 560 Z"/>
-<path d="M860 200 L900 360 L820 500 L700 380 L760 240 Z"/>
-</g>
-<g stroke="rgba(63,127,214,.18)" stroke-width="1">
-<path d="M180 560 L320 620 L300 780 L140 740 Z"/>
-<path d="M320 620 L470 600 L500 760 L300 780 Z"/>
-</g></svg><div class="wrap">
+</aside><section class="hero"><img class="hero-photo" src="assets/hero-mine.jpg" alt="Inside a working gem mine in Ratnapura, Sri Lanka" onerror="this.remove()"><video class="hero-video" autoplay muted loop playsinline poster="assets/hero-mine.jpg" aria-hidden="true"><source src="assets/hero-loop.mp4?v=3" type="video/mp4"></video><div class="hero-art hero-ov"></div><div class="wrap">
 <span class="eyebrow" data-rv>Ratnapura &middot; Sri Lanka</span>
 <h1 data-rv>Own a piece of the earth's <span class="g">rarest blue.</span></h1>
 <p data-rv>Sapphire Trails takes you to the source of the world's most celebrated gemstones. Descend a working mine, choose your own Ceylon sapphire, and wear it home as a piece designed by hand. Sri Lanka's first professional gem tours.</p>
