@@ -412,6 +412,25 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
   display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all var(--t) var(--ease)}
 .backtop.show{opacity:1;visibility:visible;transform:none}
 .backtop svg{width:20px;height:20px}
+.dyk{position:relative;overflow:hidden;padding:var(--s-24) 0;background:linear-gradient(160deg,#0b1020,#0a0d18 60%,#0c1226);color:#eef2fb}
+.dyk-glow{position:absolute;inset:0;z-index:0;background:radial-gradient(60% 90% at 18% 25%,rgba(63,127,214,.35),transparent 60%),radial-gradient(50% 80% at 88% 85%,rgba(198,163,78,.16),transparent 55%)}
+.dyk .wrap{position:relative;z-index:1}
+.dyk-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s-16);align-items:center}
+@media(max-width:900px){.dyk-grid{grid-template-columns:1fr;gap:var(--s-10)}}
+.dyk h2{color:#f4f7ff;font-size:var(--fs-2xl);margin:var(--s-4) 0 var(--s-5);line-height:1.15}
+.dyk p{color:rgba(224,231,247,.82);font-size:var(--fs-md);line-height:1.7;margin-bottom:var(--s-8)}
+.dyk-media{position:relative;aspect-ratio:1;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.dyk-media img{width:100%;height:100%;object-fit:cover}
+.dyk-ring{position:absolute;inset:-40%;z-index:2;pointer-events:none;background:conic-gradient(from 0deg,transparent,rgba(142,197,255,.5),transparent 30%);animation:spin 8s linear infinite;mix-blend-mode:screen;opacity:.6}
+.dyk-media::after{content:"";position:absolute;inset:0;z-index:3;border-radius:var(--r-lg);box-shadow:inset 0 0 0 1px rgba(142,197,255,.25)}
+@media(prefers-reduced-motion:reduce){.dyk-ring{animation:none}}
+/* subtle sapphire accents so light sections aren't flat */
+.section.tint-a{background:radial-gradient(60% 80% at 92% 8%,rgba(63,127,214,.07),transparent 55%),var(--bg)}
+.section.tint-b{background:radial-gradient(70% 80% at 6% 100%,rgba(63,127,214,.06),transparent 55%),radial-gradient(50% 60% at 100% 0,rgba(198,163,78,.05),transparent),var(--surface)}
+.est-total{border:1px solid rgba(63,127,214,.25)!important}
+.hero h1 .g{background:linear-gradient(120deg,#8ec5ff,#4f95ee 45%,#2f6fd0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 2px 30px rgba(63,127,214,.35)}
+/* sapphire glow the hero headline for legibility on any frame */
+.hero h1{text-shadow:0 2px 24px rgba(0,0,0,.5)}
 @media(min-width:1001px){.backtop{bottom:26px}}
 
 </style></head><body><div class="pgbar" id="pgbar"></div><header class="nav" id="nav"><div class="wrap">
