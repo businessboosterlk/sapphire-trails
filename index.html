@@ -199,6 +199,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .est-opt .l span{font-size:var(--fs-xs);color:var(--faint)}
 .est-opt .r{display:flex;align-items:center;gap:var(--s-4)}
 .est-opt .p{color:var(--brand);font-size:var(--fs-sm);font-variant-numeric:tabular-nums}
+.est-opt.has-sw{cursor:pointer} .est-opt.has-sw:hover{background:rgba(63,127,214,.04)}
 .sw{position:relative;width:46px;height:26px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line-2);transition:background var(--t-fast)}
 .sw.on{background:var(--brand)}
 .sw::after{content:"";position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform var(--t) var(--ease)}
@@ -501,9 +502,9 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
 <div class="estimator"><div class="est-grid"><div>
 <div class="est-opt has-qty" data-est="Mine tour (per person)" data-price="160" ><div class="l"><b>Mine tour (per person)</b><span>Working mine, market &amp; cutting demo</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="160"></span></span><div class="qty"><button onclick="estQty(this,-1)" aria-label="less">-</button><input value="0" inputmode="numeric" onchange="estUpdate()" readonly><button onclick="estQty(this,1)" aria-label="more">+</button></div></div></div>
 <div class="est-opt has-qty" data-est="Tea estate &amp; dining" data-price="30" ><div class="l"><b>Tea estate &amp; dining</b><span>A long lunch with a view</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="30"></span></span><div class="qty"><button onclick="estQty(this,-1)" aria-label="less">-</button><input value="0" inputmode="numeric" onchange="estUpdate()" readonly><button onclick="estQty(this,1)" aria-label="more">+</button></div></div></div>
-<div class="est-opt has-sw" data-est="Custom jewellery piece" data-price="400" onclick="estToggle(this)"><div class="l"><b>Custom jewellery piece</b><span>Your stone, set by hand</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="400"></span></span><div class="sw" onclick="event.stopPropagation()"></div></div></div>
-<div class="est-opt has-sw" data-est="Loose Ceylon sapphire" data-price="250" onclick="estToggle(this)"><div class="l"><b>Loose Ceylon sapphire</b><span>A certified stone to take home</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="250"></span></span><div class="sw" onclick="event.stopPropagation()"></div></div></div>
-<div class="est-opt has-sw" data-est="Proposal Experience" data-price="1000" onclick="estToggle(this)"><div class="l"><b>Proposal Experience</b><span>The full multi-day journey</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="1000"></span></span><div class="sw" onclick="event.stopPropagation()"></div></div></div>
+<div class="est-opt has-sw" data-est="Custom jewellery piece" data-price="400" onclick="estToggle(this)"><div class="l"><b>Custom jewellery piece</b><span>Your stone, set by hand</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="400"></span></span><div class="sw"></div></div></div>
+<div class="est-opt has-sw" data-est="Loose Ceylon sapphire" data-price="250" onclick="estToggle(this)"><div class="l"><b>Loose Ceylon sapphire</b><span>A certified stone to take home</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="250"></span></span><div class="sw"></div></div></div>
+<div class="est-opt has-sw" data-est="Proposal Experience" data-price="1000" onclick="estToggle(this)"><div class="l"><b>Proposal Experience</b><span>The full multi-day journey</span></div><div class="r"><span class="p"><span class="price-usd" data-usd="1000"></span></span><div class="sw"></div></div></div>
 </div>
 <div class="est-total"><span style="font-size:var(--fs-xs);color:var(--faint);letter-spacing:.1em;text-transform:uppercase">Estimated from</span>
 <div class="big" id="estTotal">$0</div><div class="sub">Indicative. Final pricing confirmed at booking.</div>
