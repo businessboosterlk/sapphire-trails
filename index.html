@@ -332,7 +332,81 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
 .phero p{color:var(--muted);font-size:var(--fs-md);max-width:56ch;margin-top:var(--s-5)}
 .breadcrumb{font-size:var(--fs-xs);color:var(--faint);margin-bottom:var(--s-5);letter-spacing:.04em}
 .breadcrumb a:hover{color:var(--brand)}
-</style></head><body><header class="nav" id="nav"><div class="wrap">
+
+/* ═══════════════ LIGHT LUXURY RESKIN — cascade-final override layer ═══════════════ */
+:root{
+  --bg:#f8f5ee; --surface:#fffdf8; --surface-2:#f1ebdd; --ink:#191722; --muted:#5f5b4f; --faint:#98937f;
+  --line:#e8e1d0; --line-2:#d8cfb6;
+  --brand:#b3893a; --brand-deep:#8a6a26; --brand-soft:#f4ead2; --brand-glow:rgba(179,137,58,.30);
+  --shadow:0 2px 6px rgba(70,58,22,.05),0 10px 28px rgba(70,58,22,.08);
+  --shadow-md:0 8px 22px rgba(70,58,22,.09),0 22px 54px rgba(70,58,22,.12);
+  --shadow-lg:0 26px 70px rgba(70,58,22,.16);
+}
+::selection{background:var(--brand);color:#fff}
+.eyebrow{color:var(--brand-deep)}
+.lead,.sect-head p{color:var(--muted)}
+.nav{background:color-mix(in srgb,#fffdf8 78%,transparent);backdrop-filter:saturate(150%) blur(16px)}
+.nav.stick{background:color-mix(in srgb,#fffdf8 94%,transparent);border-color:var(--line);box-shadow:0 8px 30px rgba(70,58,22,.08)}
+.nav-links a{color:var(--muted)} .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.cur-toggle{background:var(--surface-2);border-color:var(--line-2)}
+.cur-toggle button{color:var(--faint)} .cur-toggle button.on{color:#fff;background:var(--brand)}
+.btn-ghost{color:var(--ink);background:var(--surface);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-deep)}
+.drawer{background:var(--surface)} .drawer a{color:var(--ink);border-color:var(--line)}
+.hero h1{color:#f7f3ea}
+.hero .eyebrow{color:#d9b96a}
+.hero-badges b{color:#f7f3ea} .hero-badges div{color:rgba(233,228,214,.72)}
+.hero .btn-ghost{color:#f7f3ea;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3)}
+.hero .btn-ghost:hover{border-color:#d9b96a;color:#d9b96a}
+.trust{background:var(--surface-2);border-color:var(--line)}
+.trust .item{border-left-color:var(--brand)}
+.trust .item b{color:var(--brand-deep)} .trust .item span{color:var(--muted)}
+.card .ic{width:50px;height:50px;border-radius:14px;
+  background:linear-gradient(140deg,#f9efd8,#eeddb4);
+  border:1px solid rgba(179,137,58,.35);color:var(--brand-deep);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 3px 10px rgba(179,137,58,.16);
+  transition:transform var(--t) var(--ease),box-shadow var(--t)}
+.card:hover .ic{transform:translateY(-2px) rotate(-3deg);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 8px 18px rgba(179,137,58,.26)}
+.card-link{color:var(--brand-deep)}
+.card .price{color:var(--brand-deep)}
+.step::before{color:var(--brand);opacity:.85}
+.tier{background:var(--surface)} .tier.feat{border-color:var(--brand)}
+.tier .amt{color:var(--ink)} .tier li svg{color:var(--brand-deep)}
+.quote{background:var(--surface)} .quote .stars{color:var(--brand)} .quote p{color:var(--ink)}
+.estimator{background:var(--surface);border-color:var(--line-2)}
+.est-total{background:var(--surface-2)} .est-total .big{color:var(--brand-deep)}
+.est-opt .p{color:var(--brand-deep)}
+.sw{background:#e5decb;border-color:var(--line-2)} .sw.on{background:var(--brand)}
+.qty button{border-color:var(--line-2);color:var(--ink)}
+.qa button{color:var(--ink)} .qa button svg{color:var(--brand-deep)}
+.field input,.field textarea,.field select{background:var(--surface);border-color:var(--line-2);color:var(--ink)}
+.form-ok{background:var(--brand-soft);border-color:var(--brand)}
+.cta{background:radial-gradient(90% 120% at 50% 0%,rgba(63,127,214,.14),transparent),radial-gradient(80% 100% at 50% 120%,rgba(198,163,78,.18),transparent),#15131f}
+.cta h2{color:#f7f3ea} .cta p{color:rgba(233,228,214,.78)}
+.cta .btn-ghost{color:#f7f3ea;background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3)}
+.footer{background:#12101a;border-top:none}
+.phero::before{background:linear-gradient(180deg,rgba(248,245,238,.88),rgba(248,245,238,.96) 60%,var(--bg)),radial-gradient(70% 90% at 85% 0%,rgba(179,137,58,.12),transparent 60%)}
+.phero.hasimg::before{background:linear-gradient(90deg,rgba(248,245,238,.98) 30%,rgba(248,245,238,.82) 52%,rgba(248,245,238,.06) 82%),linear-gradient(180deg,rgba(248,245,238,.15) 50%,var(--bg) 96%)}
+.phero-photo{opacity:.9;z-index:-2}
+.phero h1{color:var(--ink)} .phero p{color:var(--muted)}
+.breadcrumb{color:var(--faint)}
+.gallery figure{border-color:var(--line)}
+.bookbar{background:color-mix(in srgb,#fffdf8 92%,transparent);border-top:1px solid var(--line)}
+.pgbar{position:fixed;top:0;left:0;height:3px;width:0;z-index:300;background:linear-gradient(90deg,#d9b96a,var(--brand));box-shadow:0 0 8px rgba(179,137,58,.5)}
+.marquee{overflow:hidden;background:#15131f;border-block:1px solid rgba(217,185,106,.25);padding:18px 0}
+.marquee .track{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;white-space:nowrap}
+.marquee span{font-family:var(--font-display);font-size:var(--fs-md);color:#d9b96a;letter-spacing:.06em}
+.marquee i{color:rgba(217,185,106,.5);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+.backtop{position:fixed;right:22px;bottom:88px;z-index:120;width:46px;height:46px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--line-2);color:var(--brand-deep);box-shadow:var(--shadow-md);
+  display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:all var(--t) var(--ease)}
+.backtop.show{opacity:1;visibility:visible;transform:none}
+.backtop svg{width:20px;height:20px}
+@media(min-width:1001px){.backtop{bottom:26px}}
+
+</style></head><body><div class="pgbar" id="pgbar"></div><header class="nav" id="nav"><div class="wrap">
 <a href="index.html" class="brand"><img src="assets/st_logo_gold.png" alt="Sapphire Trails"></a>
 <nav class="nav-links"><a href="gem-tours.html">Gem Tours</a><a href="custom-jewellery.html">Custom Jewellery</a><a href="proposal-experience.html">Proposals</a><a href="ceylon-sapphires.html">Ceylon Sapphires</a><a href="blog.html">Journal</a><a href="about.html">About</a></nav>
 <div class="actions"><div class="cur-toggle" role="group" aria-label="Currency"><button data-cur="USD" onclick="setCur('USD')">USD</button><button data-cur="GBP" onclick="setCur('GBP')">GBP</button><button data-cur="EUR" onclick="setCur('EUR')">EUR</button><button data-cur="LKR" onclick="setCur('LKR')">LKR</button></div><a class="btn btn-primary btn-sm" href="contact.html">Enquire</a>
@@ -361,16 +435,16 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
 <p data-rv>Sapphire Trails takes you to the source of the world's most celebrated gemstones. Descend a working mine, choose your own Ceylon sapphire, and wear it home as a piece designed by hand. Sri Lanka's first professional gem tours.</p>
 <div class="hero-cta" data-rv><a class="btn btn-primary btn-lg" href="gem-tours.html">Explore gem tours</a><a class="btn btn-ghost btn-lg" href="#plan">Plan your journey</a></div>
 <div class="hero-badges" data-rv>
- <div><b>2,000+</b>years of Ceylon gems</div>
+ <div><b data-cu="2000" data-cusuf="+">2,000+</b>years of Ceylon gems</div>
  <div><b>From $160</b>per person, mine tours</div>
  <div><b>Expert-led</b>certified at the source</div>
 </div></div>
 <div class="hero-scroll">Scroll<span></span></div></section><section class="trust"><div class="wrap">
 <div class="item"><b>1st</b><span>Professional gem tours in Sri Lanka</span></div>
-<div class="item"><b>1,404 ct</b><span>Largest blue star sapphire, found in Ratnapura</span></div>
+<div class="item"><b data-cu="1404" data-cusuf=" ct">1,404 ct</b><span>Largest blue star sapphire, found in Ratnapura</span></div>
 <div class="item"><b>4-7 days</b><span>To craft your custom ring by hand</span></div>
 <div class="item"><b>UK &middot; EU &middot; US &middot; UAE</b><span>Travellers we welcome</span></div>
-</div></section><section class="section"><div class="wrap"><div class="sect-head center">
+</div></section><div class="marquee" aria-hidden="true"><div class="track"><span>Ceylon Sapphires</span><i>&#9670;</i><span>Ratnapura</span><i>&#9670;</i><span>Working Mine Tours</span><i>&#9670;</i><span>Bespoke Jewellery</span><i>&#9670;</i><span>The Proposal Experience</span><i>&#9670;</i><span>Certified At The Source</span><i>&#9670;</i><span>Ceylon Sapphires</span><i>&#9670;</i><span>Ratnapura</span><i>&#9670;</i><span>Working Mine Tours</span><i>&#9670;</i><span>Bespoke Jewellery</span><i>&#9670;</i><span>The Proposal Experience</span><i>&#9670;</i><span>Certified At The Source</span><i>&#9670;</i></div></div><section class="section"><div class="wrap"><div class="sect-head center">
 <span class="eyebrow c" style="justify-content:center">The experiences</span><h2>Four ways to walk the trail</h2>
 <p>From an hour underground to a four-day proposal journey, every experience ends with a real Ceylon stone in your hand.</p></div>
 <div class="grid-4">
@@ -416,6 +490,7 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
 <div class="bar"><span>&copy; 2026 Sapphire Trails. All rights reserved.</span><span>Ceylon sapphires, sourced at the trail.</span></div>
 </div></footer>
 <div class="bookbar"><a class="btn btn-ghost" href="https://wa.me/94763756688" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M8.5 8.5c.3 3 2 4.7 5 5 .8.1 1.3-.6 1.4-1.2.1-.4-.1-.6-.4-.8l-1.4-.7c-.3-.1-.5 0-.7.2l-.4.5c-1-.5-1.6-1.1-2-2l.5-.4c.2-.2.3-.4.2-.7L10 6.9c-.2-.4-.5-.6-.9-.5-.6.1-1.3.6-1.2 1.4z"/></svg> WhatsApp</a><a class="btn btn-primary" href="contact.html">Enquire now</a></div>
+<button class="backtop" id="backtop" aria-label="Back to top" onclick="scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <div class="lb" id="lb" onclick="closeLB()"><button class="x" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button><img src="" alt="Sapphire Trails gallery image"></div>
 
 <script>
@@ -424,10 +499,21 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
  document.documentElement.classList.add('reveal-on');
  var rv=document.querySelectorAll('[data-rv]');
  function reveals(){var vh=innerHeight||document.documentElement.clientHeight||800;rv.forEach(function(el){if(el.getBoundingClientRect().top<vh-60)el.classList.add('in');});}
- function onScroll(){if(nav)nav.classList.toggle('stick',scrollY>8);reveals();}
+ var pgb=document.getElementById('pgbar');var bt=document.getElementById('backtop');var hv=document.querySelector('.hero-video');
+ function countups(){document.querySelectorAll('[data-cu]').forEach(function(el){
+   if(el._cud)return; var r=el.getBoundingClientRect(); if(r.top>innerHeight-60)return; el._cud=1;
+   var target=+el.dataset.cu, suf=el.dataset.cusuf||'', t0=null;
+   function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/1300); p=1-Math.pow(1-p,3);
+     el.textContent=Math.round(target*p).toLocaleString()+suf; if(p<1)requestAnimationFrame(step); }
+   requestAnimationFrame(step); });}
+ function onScroll(){if(nav)nav.classList.toggle('stick',scrollY>8);reveals();
+   if(pgb){var h=document.documentElement.scrollHeight-innerHeight;pgb.style.width=(h>0?(scrollY/h*100):0)+'%';}
+   if(bt)bt.classList.toggle('show',scrollY>600);
+   if(hv&&scrollY<innerHeight)hv.style.transform='translateY('+(scrollY*0.16)+'px) scale(1.06)';
+   countups();}
  addEventListener('scroll',function(){requestAnimationFrame(onScroll);},{passive:true});
  addEventListener('resize',reveals,{passive:true});addEventListener('load',reveals);
- onScroll();requestAnimationFrame(reveals);setTimeout(reveals,120);setTimeout(reveals,450);setTimeout(reveals,1200);
+ onScroll();setTimeout(countups,350);requestAnimationFrame(reveals);setTimeout(reveals,120);setTimeout(reveals,450);setTimeout(reveals,1200);
  // drawer
  window.openDrawer=function(){document.getElementById('drawer').classList.add('open');document.getElementById('scrim').classList.add('open');};
  window.closeDrawer=function(){document.getElementById('drawer').classList.remove('open');document.getElementById('scrim').classList.remove('open');};
